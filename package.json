@@ -1,0 +1,23 @@
+{
+  "name": "adobe-target",
+  "version": "1.0.0",
+  "description": "Adobe Target at.js Test Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server --gzip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5amfung/adobe-target.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/5amfung/adobe-target/issues"
+  },
+  "homepage": "https://github.com/5amfung/adobe-target#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
