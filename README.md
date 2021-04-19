@@ -1,2 +1,2 @@
-# target-at.js
-Adobe Target at.js Test Page
+# Adobe Target Test Page
+Adobe Target Test Page
