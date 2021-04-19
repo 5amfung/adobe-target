@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adobe Target Sample Page</title>
+  <link rel="stylesheet" href="simple-grid.min.css">
+  <script type="text/javascript">
+    window.targetGlobalSettings = {
+      clientCode: 'adobesummit2018',
+      imsOrgId: '65453EA95A70434F0A495D34@AdobeOrg',
+      serverDomain: 'adobesummit2018.tt.omtrdc.net',
+      overrideMboxEdgeServer: true,
+      pageLoadEnabled: true,
+      viewsEnabled: true,
+    };
+    function targetPageParams() {
+      // sam-test-property
+      return {
+        "at_property": "a4d17d78-cb39-6171-b12d-a222a62ebe49"
+      };
+    }
+  </script>
+  <script src="assets/js/at2.4.1.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h2>AB</h2>
+      <div style="background-color: #957dad" id="foo-ab-test">
+        Default experience
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
