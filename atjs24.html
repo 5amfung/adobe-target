@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Adobe Target Sample Page</title>
+  <title>Adobe Target at.js 2.4.x</title>
   <link rel="stylesheet" href="simple-grid.min.css">
   <script type="text/javascript">
     window.targetGlobalSettings = {
@@ -31,25 +31,27 @@
     <div class="col-6">
       <h2>AB Test</h2>
       <div style="background-color: #e0bbe4" id="foo-ab-test">
-        Control Experience
+        Control Experience A
       </div>
+      <button id="convert-foo-ab-test">Convert</button>
     </div>
     <div class="col-6">
       <h2>XT Test</h2>
       <div style="background-color: #fec8d8" id="foo-xt-test">
         Control Experience
       </div>
+      <button id="convert-foo-xt-test">Convert</button>
     </div>
   </div>
 
   <div class="row">
     <div class="col-6">
-      <h2>AP</h2>
+      <h2>Multivariate Test</h2>
       <div style="background-color: #bae1ff">
-        <div id="foo-ap-offer-a">Control Offer A1</div>
-        <div id="foo-ap-offer-b">Control Offer B1</div>
-        <div id="foo-ap-offer-c">Control Offer C1</div>
+        <div id="foo-mvt-offer-a">Control Offer A1</div>
+        <div id="foo-mvt-offer-b">Control Offer B1</div>
       </div>
+      <button id="convert-foo-mvt">Convert</button>
     </div>
     <div class="col-6">
     </div>
