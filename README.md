@@ -1,5 +1,5 @@
 # Adobe Target Test Page
-Adobe Target Test Page
+Sample pages using at.js. 
 
 ## Demo Pages
 
