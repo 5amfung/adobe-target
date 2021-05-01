@@ -1,0 +1,18 @@
+#spa ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#spa ul.nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+#spa ul.nav li a {
+    text-decoration: none;
+}
+
+#spa ul.nav li a:hover {
+    text-decoration: underline;
+}
