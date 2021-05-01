@@ -3,17 +3,14 @@
     home: {
       title: 'Home',
       description: 'This is home page.',
-      convertId: 'convert-foo-view-home',
     },
     about: {
       title: 'About',
       description: 'This is about page.',
-      convertId: 'convert-foo-view-about',
     },
     contact: {
       title: 'Contact',
       description: 'This is contact page.',
-      convertId: 'convert-foo-view-contact',
     }
   };
 
@@ -22,7 +19,7 @@
 
     const data = content[viewName];
 
-    div.innerHTML = `<div>${data.title} - ${data.description}</div><div id="${data.convertId}">Convert ${data.title}</div>`;
+    div.innerHTML = `<div>${data.title} - ${data.description}</div>`;
   }
 
   function changeRoute(viewName) {
