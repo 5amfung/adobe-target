@@ -1,19 +1,19 @@
 (function() {
   const content = {
     home: {
-      title: "Home",
-      description:
-        "This is home page.",
+      title: 'Home',
+      description: 'This is home page.',
+      convertId: 'convert-foo-view-home',
     },
     about: {
-      title: "About",
-      description:
-        "This is about page.",
+      title: 'About',
+      description: 'This is about page.',
+      convertId: 'convert-foo-view-about',
     },
     contact: {
-      title: "Contact",
-      description:
-        "This is contact page.",
+      title: 'Contact',
+      description: 'This is contact page.',
+      convertId: 'convert-foo-view-contact',
     }
   };
 
@@ -22,7 +22,7 @@
 
     const data = content[viewName];
 
-    div.innerHTML = `${data.title} - ${data.description}`;
+    div.innerHTML = `<div>${data.title} - ${data.description}</div><div id="${data.convertId}">Convert ${data.title}</div>`;
   }
 
   function changeRoute(viewName) {
