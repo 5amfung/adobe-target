@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adobe Target at.js SPA with A4T</title>
+    <link rel="stylesheet" href="assets/css/simple-grid.min.css">
+    <link rel="stylesheet" href="assets/css/spa.css">
+    <script type="text/javascript">
+      window.targetGlobalSettings = {
+        clientCode: 'unifiedjslab',
+        imsOrgId: '97D1F3F459CE0AD80A495CBE@AdobeOrg',
+        serverDomain: 'unifiedjslab.tt.omtrdc.net',
+        // Comment cookieDomain when testing on localhost.
+        cookieDomain: '5amfung.github.io',
+        overrideMboxEdgeServer: true,
+        pageLoadEnabled: true,
+        viewsEnabled: true,
+      };
+    </script>
+    <script src="assets/js/at2.7.0.min.js"></script>
+    <script src="assets/spa.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 center">
+            <h1>at.js SPA with A4T</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="spa">
+                <ul class="nav">
+                    <li><a class="nav-link" id="home" href="#home">home</a></li>
+                    <li><a class="nav-link" id="about" href="#about">about</a></li>
+                    <li><a class="nav-link" id="contact" href="#contact">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="spa-content"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="convert-foo-spa">Convert</div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
