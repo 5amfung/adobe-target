@@ -21,7 +21,7 @@
     let innerHTML = `<div>${data.title} - ${data.description}</div>`;
 
     if (viewName === 'home') {
-      innerHTML += '<div id="convert-foo-spa">Convert</div>';
+      innerHTML += '<div id="convert-foo-spa">Click here to convert</div>';
     }
 
     div.innerHTML = innerHTML;
