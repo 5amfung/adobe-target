@@ -18,8 +18,13 @@
     const div = document.getElementById("spa-content");
 
     const data = content[viewName];
+    let innerHTML = `<div>${data.title} - ${data.description}</div>`;
 
-    div.innerHTML = `<div>${data.title} - ${data.description}</div>`;
+    if (viewName === 'home') {
+      innerHTML += '<div class="row"><div class="col-12"><div id="convert-foo-spa">Convert</div></div></div>';
+    }
+
+    div.innerHTML = innerHTML;
   }
 
   function changeRoute(viewName) {
