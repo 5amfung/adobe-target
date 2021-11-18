@@ -3,7 +3,6 @@ Test page using at.js.
 
 ## Demo Pages
 
-* https://5amfung.github.io/adobe-target/atjs.html 
-* https://5amfung.github.io/adobe-target/spa.html
+* https://5amfung.github.io/adobe-target
 
 
