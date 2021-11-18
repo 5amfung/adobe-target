@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Adobe Target at.js with A4T</title>
+  <title>Adobe Target Alloy with A4T</title>
   <link rel="stylesheet" href="assets/css/simple-grid.min.css">
   <script>
     !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
@@ -12,14 +12,20 @@
   </script>
   <script src="https://cdn1.adoberesources.net/alloy/2.7.0/alloy.min.js"></script>
   <script>
-    alloy("configure", {
+    alloy('configure', {
       edgeDomain: '5amfung.github.io',
-      edgeConfigId: "bc1a10e0-aee4-4e0e-ac5b-cdbb9abbec83",
-      orgId: "5BFE274A5F6980A50A495C08@AdobeOrg",
+      edgeConfigId: 'bc1a10e0-aee4-4e0e-ac5b-cdbb9abbec83',
+      orgId: '5BFE274A5F6980A50A495C08@AdobeOrg',
       debugEnabled: true,
       onBeforeEventSend: function(options) {
         console.log('hello');
       }
+    });
+    alloy('sendEvent', {
+      renderDecisions: true,
+      xdm: {}
+    }).then(() => {
+      console.log('done');
     });
   </script>
 </head>
