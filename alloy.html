@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adobe Target at.js with A4T</title>
+  <link rel="stylesheet" href="assets/css/simple-grid.min.css">
+  <script>
+    !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+            []).push(o),n[o]=function(){var u=arguments;return new Promise(
+            function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+    (window,["alloy"]);
+  </script>
+  <script src="https://cdn1.adoberesources.net/alloy/2.7.0/alloy.min.js"></script>
+  <script>
+    alloy("configure", {
+      edgeDomain: '5amfung.github.io',
+      edgeConfigId: "bc1a10e0-aee4-4e0e-ac5b-cdbb9abbec83",
+      orgId: "5BFE274A5F6980A50A495C08@AdobeOrg",
+      debugEnabled: true,
+      onBeforeEventSend: function(options) {
+        console.log('hello');
+      }
+    });
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 center">
+      <h1>Alloy with A4T</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <h2>AB Test</h2>
+      You might get A or B.
+      <div style="background-color: #e0bbe4" id="foo-ab-test">
+        Control Experience A
+      </div>
+      <div id="convert-foo-ab-test">Click here to convert Experience A</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
