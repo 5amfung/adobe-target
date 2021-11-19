@@ -20,12 +20,13 @@
       onBeforeEventSend: function(options) {
         console.log('hello');
       }
-    });
-    alloy('sendEvent', {
-      renderDecisions: true,
-      xdm: {}
     }).then(() => {
-      console.log('done');
+      return alloy('sendEvent', {
+        renderDecisions: true,
+        xdm: {}
+      }).then(() => {
+        console.log('done');
+      });
     });
   </script>
 </head>
