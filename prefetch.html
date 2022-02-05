@@ -24,6 +24,7 @@
   </script>
   <script src="assets/js/at2.6.1.min.js"></script>
   <script type="application/javascript">
+    console.log('Prefetch');
     adobe.target.getOffer({
       request: {
         prefetch: {
@@ -43,74 +44,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12 center">
-      <h1>Standalone at.js</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-6">
-      <h2>AB Test</h2>
-      You might get A or B.
-      See <a target="_blank" href="https://experience.adobe.com/#/@adobesummit2018/target/activities/activitydetails/A-B/ab_test_demo_on_https5amfunggithubio">activity</a>.
-      <div style="background-color: #e0bbe4" id="foo-ab-test">
-        Control Experience A
-      </div>
-      <div id="convert-foo-ab-test">Convert</div>
-    </div>
-    <div class="col-6">
-      <h2>Auto-Allocate</h2>
-      You might get A (control) or B (experiment).
-      See <a target="_blank" href="https://experience.adobe.com/#/@adobesummit2018/target/activities/activitydetails/A-B/demo_auto-allocate">activity</a>.
-      <div style="background-color: #d5d6ea" id="foo-aa-test">
-        Control Experience A
-      </div>
-      <div id="convert-foo-aa">Convert</div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-6">
-      <h2>XT Test</h2>
-      You might get control or Chrome.
-      See <a target="_blank" href="https://experience.adobe.com/#/@adobesummit2018/target/activities/activitydetails/Experience-Targeting/demo_xt_targeting">activity</a>.
-      <div style="background-color: #fec8d8" id="foo-xt-test">
-        Control Experience
-      </div>
-      <div id="convert-foo-xt-test">Convert</div>
-    </div>
-    <div class="col-6">
-      <h2>Multivariate Test</h2>
-      You might get one of 9 (3x3) combinations.
-      See <a target="_blank" href="https://experience.adobe.com/#/@adobesummit2018/target/activities/activitydetails/MVT/demo_mvt">activity</a>.
-      <div style="background-color: #bae1ff">
-        <div id="foo-mvt-offer-a">Control Offer A1</div>
-        <div id="foo-mvt-offer-b">Control Offer B1</div>
-      </div>
-      <div id="convert-foo-mvt">Convert</div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-6">
-      <h2>Auto-Personalization</h2>
-      You might get one of 8 (2x2x2) combinations.
-      See <a target="_blank" href="https://experience.adobe.com/#/@adobesummit2018/target/activities/activitydetails/1-1/demo_auto-personalization">activity</a>.
-      <div style="background-color: #aff8d8">
-        <div id="foo-ap-a">Control Offer A1</div>
-        <div id="foo-ap-b">Control Offer B1</div>
-        <div id="foo-ap-c">Control Offer C1</div>
-      </div>
-      <div id="convert-foo-ap">Convert</div>
-    </div>
-    <div class="col-6">
-      <h2>Auto-Target</h2>
-      You might get one of 4 (2x2) experiences.
-      See <a target="_blank" href="https://experience.adobe.com/#/@adobesummit2018/target/activities/activitydetails/A-B/demo_auto-target">activity</a>.
-      <div style="background-color: #e7ecd9">
-        <div id="foo-at-a">Control Offer A1</div>
-        <div id="foo-at-b">Control Offer B1</div>
-      </div>
-      <div id="convert-foo-at">Convert</div>
+      <h1>Open console to see prefetch using at.js</h1>
     </div>
   </div>
 </div>
