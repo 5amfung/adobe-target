@@ -15,49 +15,44 @@
       pageLoadEnabled: false,
       viewsEnabled: false,
     };
-    // function targetPageParams() {
-    //   // sam-test-property
-    //   return {
-    //     "at_property": "a4d17d78-cb39-6171-b12d-a222a62ebe49"
-    //   };
-    // }
+    function targetPageParams() {
+      // sam-test-property
+      return {
+        "at_property": "a4d17d78-cb39-6171-b12d-a222a62ebe49"
+      };
+    }
   </script>
   <script src="assets/js/at2.8.1.min.js"></script>
   <script type="application/javascript">
-    console.log('Prefetch');
+    // console.log('Prefetch');
     // adobe.target.getOffers({
-      // request: {
-      //   execute: {
-      //     mboxes: [
-      //       {
-      //         index: 0,
-      //         name: 'sfung-prefetch-test'
-      //       }
-      //     ]
-      //   }
-      // }
-    adobe.target.getOffers({
-      request: {
-        prefetch: {
-          mboxes: [
-            {
-              index: 0,
-              name: 'sfung-prefetch-test'
-            }
-          ]
-        }
-      }
-    }).then(() => {
-      console.log('Done');
-    });
+    //   request: {
+    //     prefetch: {
+    //       mboxes: [
+    //         {
+    //           index: 0,
+    //           name: 'sfung-prefetch-test'
+    //         }
+    //       ]
+    //     }
+    //   }
+    // }).then(() => {
+    //   console.log('Done');
+    // });
   </script>
 </head>
 <body>
 
 <div class="container">
   <div class="row">
-    <div class="col-12 center">
-      <h1>Open console to see prefetch using at.js</h1>
+    <div class="col-6">
+      <h2>Prefetch mbox</h2>
+      Prefetch mbox but the content is not rendered.
+      See <a target="_blank" href="">activity</a>.
+      <div style="background-color: #e0bbe4" id="foo-ab-prefetch">
+        Control Experience A
+      </div>
+      <div id="convert-prefetch">Convert</div>
     </div>
   </div>
 </div>
