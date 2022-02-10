@@ -12,8 +12,8 @@
       // Comment cookieDomain when testing on localhost.
       cookieDomain: '5amfung.github.io',
       overrideMboxEdgeServer: true,
-      pageLoadEnabled: false,
-      viewsEnabled: false,
+      // pageLoadEnabled: false,
+      // viewsEnabled: false,
     };
     // function targetPageParams() {
     //   // sam-test-property
@@ -25,20 +25,9 @@
   <script src="assets/js/at2.8.1.min.js"></script>
   <script type="application/javascript">
     console.log('Prefetch');
-    adobe.target.getOffers({
-      request: {
-        execute: {
-          mboxes: [
-            {
-              index: 0,
-              name: 'sfung-prefetch-test'
-            }
-          ]
-        }
-      }
-      // adobe.target.getOffers({
+    // adobe.target.getOffers({
       // request: {
-      //   prefetch: {
+      //   execute: {
       //     mboxes: [
       //       {
       //         index: 0,
@@ -47,6 +36,17 @@
       //     ]
       //   }
       // }
+    adobe.target.getOffers({
+      request: {
+        prefetch: {
+          mboxes: [
+            {
+              index: 0,
+              name: 'sfung-prefetch-test'
+            }
+          ]
+        }
+      }
     }).then(() => {
       console.log('Done');
     });
