@@ -27,7 +27,7 @@
     console.log('Prefetch');
     adobe.target.getOffers({
       request: {
-        prefetch: {
+        execute: {
           mboxes: [
             {
               index: 0,
@@ -36,6 +36,17 @@
           ]
         }
       }
+      // adobe.target.getOffers({
+      // request: {
+      //   prefetch: {
+      //     mboxes: [
+      //       {
+      //         index: 0,
+      //         name: 'sfung-prefetch-test'
+      //       }
+      //     ]
+      //   }
+      // }
     }).then(() => {
       console.log('Done');
     });
