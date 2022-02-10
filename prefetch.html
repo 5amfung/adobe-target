@@ -15,14 +15,14 @@
       pageLoadEnabled: false,
       viewsEnabled: false,
     };
-    function targetPageParams() {
-      // sam-test-property
-      return {
-        "at_property": "a4d17d78-cb39-6171-b12d-a222a62ebe49"
-      };
-    }
+    // function targetPageParams() {
+    //   // sam-test-property
+    //   return {
+    //     "at_property": "a4d17d78-cb39-6171-b12d-a222a62ebe49"
+    //   };
+    // }
   </script>
-  <script src="assets/js/at2.6.1.min.js"></script>
+  <script src="assets/js/at2.8.1.min.js"></script>
   <script type="application/javascript">
     console.log('Prefetch');
     adobe.target.getOffers({
@@ -31,12 +31,14 @@
           mboxes: [
             {
               index: 0,
-              name: 'sam-prefetch-mbox'
+              name: 'sfung-prefetch-test'
             }
           ]
         }
       }
-    }).then(console.log);
+    }).then(() => {
+      console.log('Done');
+    });
   </script>
 </head>
 <body>
