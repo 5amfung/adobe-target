@@ -24,21 +24,21 @@
   </script>
   <script src="assets/js/at2.8.1.min.js"></script>
   <script type="application/javascript">
-    // console.log('Prefetch');
-    // adobe.target.getOffers({
-    //   request: {
-    //     prefetch: {
-    //       mboxes: [
-    //         {
-    //           index: 0,
-    //           name: 'sfung-prefetch-test'
-    //         }
-    //       ]
-    //     }
-    //   }
-    // }).then(() => {
-    //   console.log('Done');
-    // });
+    console.log('Prefetch');
+    adobe.target.getOffers({
+      request: {
+        prefetch: {
+          mboxes: [
+            {
+              index: 0,
+              name: 'sfung-prefetch-test'
+            }
+          ]
+        }
+      }
+    }).then(() => {
+      console.log('Done');
+    });
   </script>
 </head>
 <body>
@@ -47,12 +47,6 @@
   <div class="row">
     <div class="col-6">
       <h2>Prefetch mbox</h2>
-      Prefetch mbox but the content is not rendered.
-      See <a target="_blank" href="">activity</a>.
-      <div style="background-color: #e0bbe4" id="foo-ab-prefetch">
-        Control Experience A
-      </div>
-      <div id="convert-prefetch">Convert</div>
     </div>
   </div>
 </div>
