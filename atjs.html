@@ -18,7 +18,10 @@
     function targetPageParams() {
       // sam-test-property
       return {
-        "at_property": "a4d17d78-cb39-6171-b12d-a222a62ebe49"
+        'at_property': 'a4d17d78-cb39-6171-b12d-a222a62ebe49',
+        profile: {
+          'mood': 'happy'
+        }
       };
     }
   </script>
@@ -99,6 +102,19 @@
       <div id="convert-foo-at">Convert</div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-6">
+      <h2>Audience Targeting Test</h2>
+      You should always see a happy face
+      See <a target="_blank" href="">activity</a>.
+      <div style="background-color: #aff8d8">
+        <div id="foo-mood">☹️</div>
+      </div>
+      <div id="convert-foo-mood">Convert</div>
+    </div>
+  </div>
+
 </div>
 </body>
 </html>
