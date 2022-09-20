@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AJO Web Channel</title>
+  <link rel="stylesheet" href="assets/css/simple-grid.min.css">
+  <script>
+    !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+          []).push(o),n[o]=function(){var u=arguments;return new Promise(
+          function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+    (window,["alloy"]);
+  </script>
+  <script src="assets/js/ajo-alloy.js"></script>
+  <script>
+    alloy("configure", {
+      defaultConsent: "in",
+      edgeDomain: "edge-int.adobedc.net",
+      edgeConfigId: "19fc5fe9-37df-46da-8f5c-9eeff4f75ed9:prod",
+      orgId: "745F37C35E4B776E0A49421B@AdobeOrg",
+      debugEnabled: true,
+      idMigrationEnabled: false,
+      prehidingStyle: "body { opacity: 0 !important }"
+    });
+
+    alloy("sendEvent",{
+      "renderDecisions": true
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 center">
+        <h1>AJO Web Channel</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <h2>AB Test</h2>
+        You might get A or B.
+        <div style="background-color: #e0bbe4" id="ajo-test">
+          Control Experience A
+        </div>
+        <div id="convert-ajo-ab-test">Click here to convert Experience A</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
