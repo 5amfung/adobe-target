@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>AJO Web Channel</title>
   <link rel="stylesheet" href="../assets/css/simple-grid.min.css">
-  <script src='https://cdn1.adoberesources.net/alloy/2.18.0/alloy.min.js' async></script>
   <script>
     !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
             []).push(o),n[o]=function(){var u=arguments;return new Promise(
@@ -15,7 +14,7 @@
     // Datastream:  829e31a8-2b82-4e7d-8a3b-74f3c97e9dde
     // https://experience.adobe.com/#/@aemonacpprodcampaign/sname:prod/data-collection/scramjet/829e31a8-2b82-4e7d-8a3b-74f3c97e9dde/
 
-    alloy('configure', {
+    const alloyOption = {
       edgeConfigId: '829e31a8-2b82-4e7d-8a3b-74f3c97e9dde',
       orgId: '906E3A095DC834230A495FD6@AdobeOrg',
       debugEnabled: true,
@@ -25,13 +24,15 @@
       onBeforeLinkClickSend: () => {
         console.log('>>>>>>> onBeforeLinkClickSend');
       },
-    }).then(() => {
+    };
+    alloy('configure', alloyOption).then(() => {
       console.log('>>>>>>> alloy configured');
       alloy('sendEvent', {
         'renderDecisions': true
       });
     });
   </script>
+  <script src='https://cdn1.adoberesources.net/alloy/2.18.0/alloy.min.js' async></script>
 </head>
 <body>
   <div class="container">
