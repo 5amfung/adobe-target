@@ -35,11 +35,33 @@
             },
         };
         alloy('configure', alloyOption).then(() => {
-            console.log('>>>>>>> alloy configured');
-            alloy('sendEvent', {
-                'renderDecisions': true
-            });
+            console.log('>>>>>>> alloy is configured');
+
+            const url = new URL(window.location.href);
+            const email = url.searchParams.get('email');
+
+            if (!!email) {
+                console.log('>>>>>>> email: ' + email);
+
+                alloy('sendEvent', {
+                    'renderDecisions': true,
+                    // xdm: {
+                    //     identityMap: {
+                    //         Email: [
+                    //             {
+                    //                 id: email,
+                    //                 primary: true,
+                    //             }
+                    //         ]
+                    //     }
+                    // }
+                });
+            } else {
+                alloy('sendEvent', {'renderDecisions': true });
+            }
         });
+
+
     </script>
     <script src='https://cdn1.adoberesources.net/alloy/2.18.0/alloy.min.js' async></script>
 </head>
