@@ -36,10 +36,17 @@
             const url = new URL(window.location.href);
             const email = url.searchParams.get('email');
             const renderDecisions = true;
+            const xdm = {
+                web: {
+                    webPageDetails: {
+                        name: 'sfung Home',
+                    },
+                },
+            };
 
             if (!!email) {
                 console.log('>>>>>>> email: ' + email);
-                const xdm = {
+                const _xdm = Object.assign(xdm, {
                     identityMap: {
                         Email: [
                             {
@@ -48,10 +55,10 @@
                             },
                         ],
                     },
-                };
-                alloy('sendEvent', { renderDecisions, xdm, });
+                });
+                alloy('sendEvent', { renderDecisions, xdm: _xdm });
             } else {
-                alloy('sendEvent', { renderDecisions, });
+                alloy('sendEvent', { renderDecisions, xdm });
             }
         });
     </script>
