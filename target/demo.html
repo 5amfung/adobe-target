@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adobe Target at.js</title>
+  <link rel="stylesheet" href="assets/css/simple-grid.min.css">
+  <script type="text/javascript">
+    window.targetGlobalSettings = {
+      clientCode: 'aemonacpprodcampaign',
+      imsOrgId: '906E3A095DC834230A495FD6@AdobeOrg',
+      serverDomain: 'aemonacpprodcampaign.tt.omtrdc.net',
+      // Comment cookieDomain when testing on localhost.
+      cookieDomain: '5amfung.github.io',
+      overrideMboxEdgeServer: true,
+      pageLoadEnabled: true,
+      viewsEnabled: true,
+    };
+  </script>
+  <script src="assets/js/at2.8.1.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 center">
+      <h1>Target Activity Types Demo</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <h2>AB Test</h2>
+      You either 👀 A or B, but never both 🤓.
+      See <a target="_blank" href="">activity</a>.
+      <div style="background-color: #e0bbe4" id="foo-ab-test">
+        <div id="foo-ab-test-placement-a">No Experience</div>
+      </div>
+      <div id="convert-foo-ab-test">Click to convert</div>
+    </div>
+    <div class="col-6">
+      <h2>Auto-Allocate</h2>
+      You either 👀 A or B, and one will always win 🏆 eventually.
+      See <a target="_blank" href="">activity</a>.
+      <div style="background-color: #d5d6ea" id="foo-aa-test">
+        <div id="foo-aa-test-placement-a">No Experience</div>
+      </div>
+      <div id="convert-foo-aa-test">Click to convert</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <h2>XT Test</h2>
+      You will see what browser 💻 you are using.
+      See <a target="_blank" href="">activity</a>.
+      <div style="background-color: #fec8d8" id="foo-xt-test">
+        <div id="foo-xt-test-placement-a">No Experience</div>
+      </div>
+      <div id="convert-foo-xt-test">Click to convert</div>
+    </div>
+    <div class="col-6">
+      <h2>Multivariate Test</h2>
+      You will get 1 of 12 (2x2x3) combinations 🎲🎲.
+      See <a target="_blank" href="">activity</a>.
+      <div id="foo-mvt-test" style="background-color: #bae1ff">
+        <div id="foo-mvt-test-placement-a">Placement A</div>
+        <div id="foo-mvt-test-placement-b">Placement B</div>
+        <div id="foo-mvt-test-placement-C">Placement C</div>
+      </div>
+      <div id="convert-foo-mvt-test">Click to convert</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <h2>Auto-Target</h2>
+      You might get one of 4 experiences.  Picking the best one out of multiple experiences.
+      See <a target="_blank" href="">activity</a>.
+      <div id="foo-at-test" style="background-color: #e7ecd9">
+        <div id="foo-at-test-placement-a">Placement A</div>
+        <div id="foo-at-test-placement-b">Placement B</div>
+        <div id="foo-at-test-placement-c">Placement C</div>
+      </div>
+      <div id="convert-foo-at-test">Click to convert</div>
+    </div>
+    <div class="col-6">
+      <h2>Auto-Personalization</h2>
+      You will get 1 of 12 (2x2x3) combinations 🎲🎲.  Kind of like MVT on steroid 💉.
+      See <a target="_blank" href="">activity</a>.
+      <div id="foo-ap-test" style="background-color: #aff8d8">
+        <div id="foo-ap-test-placement-a">Placement A</div>
+        <div id="foo-ap-test-placement-b">Placement B</div>
+        <div id="foo-ap-test-placement-c">Placement C</div>
+      </div>
+      <div id="convert-foo-ap-test">Click to convert</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
