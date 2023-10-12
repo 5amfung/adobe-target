@@ -22,33 +22,29 @@
 
             const url = new URL(window.location.href);
             const email = url.searchParams.get('email');
-            const renderDecisions = true;
-            const xdm = {
-                web: {
-                    webPageDetails: {
-                        name: 'sfung Home',
-                    },
-                },
-            };
+            let xdm = {};
+
             // Add email to xdm.identityMap.Email to simulate a logged in user.
             if (!!email) {
                 console.log('>>>>>>> email: ' + email);
-                const xdmWithIdentityMap = Object.assign(xdm, {
+                xdm = Object.assign(xdm, {
                     identityMap: {
                         Email: [{ id: email, primary: true, },],
                     },
                 });
-                alloy('sendEvent', { renderDecisions, xdm: xdmWithIdentityMap });
-            } else {
-                alloy('sendEvent', { renderDecisions, xdm });
             }
 
-            // Offer decision
+            const renderDecisions = true;
             const decisionScopes = [
                 'eyJ4ZG06YWN0aXZpdHlJZCI6Inhjb3JlOm9mZmVyLWFjdGl2aXR5OjE3YzMzMmM0ZTQ2YjZiZTMiLCJ4ZG06cGxhY2VtZW50SWQiOiJ4Y29yZTpvZmZlci1wbGFjZW1lbnQ6MTdjMzIzMjMzMWIyMGY2MSJ9',
                 'eyJ4ZG06YWN0aXZpdHlJZCI6Inhjb3JlOm9mZmVyLWFjdGl2aXR5OjE3YzMzMmM0ZTQ2YjZiZTMiLCJ4ZG06cGxhY2VtZW50SWQiOiJ4Y29yZTpvZmZlci1wbGFjZW1lbnQ6MTdjMzIzNTA3MDI0NTkyYyJ9',
+                '__view__',
             ];
-            alloy('sendEvent', { decisionScopes, });
+            alloy('sendEvent', {
+                renderDecisions,
+                decisionScopes,
+                xdm
+            });
         });
     </script>
     <script src='https://cdn1.adoberesources.net/alloy/2.18.0/alloy.min.js' async></script>
