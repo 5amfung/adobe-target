@@ -5,19 +5,10 @@
     <title>AJO Web Channel</title>
     <link rel="stylesheet" href="../assets/css/simple-grid.min.css">
     <script>
-        !function (n, o) {
-            o.forEach(function (o) {
-                n[o] || ((n.__alloyNS = n.__alloyNS ||
-                    []).push(o), n[o] = function () {
-                    var u = arguments;
-                    return new Promise(
-                        function (i, l) {
-                            n[o].q.push([i, l, u])
-                        })
-                }, n[o].q = [])
-            })
-        }
-        (window, ["alloy"]);
+        !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+            []).push(o),n[o]=function(){var u=arguments;return new Promise(
+            function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+        (window,["alloy"]);
     </script>
     <script>
         // Datastream:  829e31a8-2b82-4e7d-8a3b-74f3c97e9dde
@@ -25,11 +16,7 @@
         const edgeConfigId = '829e31a8-2b82-4e7d-8a3b-74f3c97e9dde';
         const orgId = '906E3A095DC834230A495FD6@AdobeOrg';
         const debugEnabled = true;
-        const alloyOption = {
-            edgeConfigId, orgId, debugEnabled,
-            onBeforeEventSend: () => console.log('>>>>>>> onBeforeEventSend'),
-            onBeforeLinkClickSend: () => console.log('>>>>>>> onBeforeLinkClickSend'),
-        };
+        const alloyOption = { edgeConfigId, orgId, debugEnabled, };
         alloy('configure', alloyOption).then(() => {
             console.log('>>>>>>> alloy is configured');
 
@@ -43,23 +30,25 @@
                     },
                 },
             };
-
+            // Add email to xdm.identityMap.Email to simulate a logged in user.
             if (!!email) {
                 console.log('>>>>>>> email: ' + email);
-                const _xdm = Object.assign(xdm, {
+                const xdmWithIdentityMap = Object.assign(xdm, {
                     identityMap: {
-                        Email: [
-                            {
-                                id: email,
-                                primary: true,
-                            },
-                        ],
+                        Email: [{ id: email, primary: true, },],
                     },
                 });
-                alloy('sendEvent', { renderDecisions, xdm: _xdm });
+                alloy('sendEvent', { renderDecisions, xdm: xdmWithIdentityMap });
             } else {
                 alloy('sendEvent', { renderDecisions, xdm });
             }
+
+            // Offer decision
+            const decisionScopes = [
+                'eyJ4ZG06YWN0aXZpdHlJZCI6Inhjb3JlOm9mZmVyLWFjdGl2aXR5OjE3YzMzMmM0ZTQ2YjZiZTMiLCJ4ZG06cGxhY2VtZW50SWQiOiJ4Y29yZTpvZmZlci1wbGFjZW1lbnQ6MTdjMzIzMjMzMWIyMGY2MSJ9',
+                'eyJ4ZG06YWN0aXZpdHlJZCI6Inhjb3JlOm9mZmVyLWFjdGl2aXR5OjE3YzMzMmM0ZTQ2YjZiZTMiLCJ4ZG06cGxhY2VtZW50SWQiOiJ4Y29yZTpvZmZlci1wbGFjZW1lbnQ6MTdjMzIzNTA3MDI0NTkyYyJ9',
+            ];
+            alloy('sendEvent', { decisionScopes, });
         });
     </script>
     <script src='https://cdn1.adoberesources.net/alloy/2.18.0/alloy.min.js' async></script>
