@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJO Web Channel</title>
+    <link rel="stylesheet" href="../assets/css/simple-grid.min.css">
+    <script>
+        !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
+            []).push(o),n[o]=function(){var u=arguments;return new Promise(
+            function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+        (window,["alloy"]);
+    </script>
+    <script>
+        // Datastream:  829e31a8-2b82-4e7d-8a3b-74f3c97e9dde
+        // https://experience.adobe.com/#/@aemonacpprodcampaign/sname:prod/data-collection/scramjet/829e31a8-2b82-4e7d-8a3b-74f3c97e9dde/
+        const edgeConfigId = '829e31a8-2b82-4e7d-8a3b-74f3c97e9dde';
+        const orgId = '906E3A095DC834230A495FD6@AdobeOrg';
+        const debugEnabled = true;
+        const alloyOption = { edgeConfigId, orgId, debugEnabled, };
+        alloy('configure', alloyOption).then(() => {
+            console.log('>>>>>>> alloy is configured');
+
+            const xdm = {};
+            const renderDecisions = true;
+            alloy('sendEvent', {
+                renderDecisions,
+                xdm
+            });
+        });
+    </script>
+    <script src='https://cdn1.adoberesources.net/alloy/2.19.1/alloy.min.js' async></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12 center">
+            <h1>AJO In-App Message</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="ajo-content-div">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id ex a urna eleifend venenatis.
+                    Pellentesque pellentesque non velit sed commodo. Etiam vestibulum id lorem at consectetur. Fusce non
+                    ante et nulla semper varius ut ac eros. Vivamus id posuere nunc, eget molestie quam. Aliquam erat
+                    volutpat. Donec pharetra mi justo, scelerisque sagittis libero mollis at. Quisque quis turpis
+                    lectus. Suspendisse tristique, nunc a ultricies elementum, est velit tempor est, et tempor nunc
+                    turpis at justo.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
